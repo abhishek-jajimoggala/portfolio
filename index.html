@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body{
+            margin: 0px;
+            scroll-behavior:smooth;
+        }
+        .navbar{
+            display: flex;
+            color: white;
+            background:linear-gradient(250deg,rgb(0, 0, 0),red,rgb(26, 1, 51));
+            padding:1% 5%;
+            position: sticky;
+            top:0px;
+            align-items: center;
+            letter-spacing: 1px;
+        }
+        .intro{
+            color:wheat;
+            font-size: large;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        .logo-container{
+            display: flex;
+            line-height: 0.5;
+        }
+        .nav-links a{
+            text-decoration: none;
+            color:white;
+        }
+        .nav-links{
+            display: flex;
+            justify-content: space-evenly;
+            width:60%;
+        }
+        a{
+            text-decoration: none;
+            color:white
+        }
+        
+        .about-container{
+            display: flex;
+            background-color: rgba(15, 2, 2, 0.982);
+            justify-content: space-between;
+            padding:20px;
+            border: 3px solid white;
+            color: aliceblue;
+        }
+        .about span{
+            color: greenyellow;
+            font-family: cursive;
+        }
+        .about p{
+            color:wheat;
+            font-size:large;
+        }
+        .about{
+            padding: 3% 3%;
+        
+        }
+        .about-links{
+            padding: 5%;
+
+        }
+        .about-links button{
+            background-color:inherit;
+            padding: 10px;
+            margin: 10px;
+            color:white;
+            border: 1px solid white;
+            
+        }
+        .about-links button:hover{
+            background-color: green;
+            border-radius: 5px;
+            border:none
+        }
+        button{
+            font-family: monospace;
+            font-weight: 800;
+        }
+       .project-container{
+        background-color: black;
+        padding:2% 5%;
+        color:white;
+       }
+       .project-container h1{
+        text-align: center;
+       }
+       .card-container{
+        display: flex;
+        gap:20px
+       }
+       .card{
+            border: 1px solid rgba(245, 245, 245, 0.662);
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .card-container img{
+            width: 100%;
+            border-radius:10px;
+        }
+        .card p{
+            font-size: 0.8rem;
+            color:rgba(255, 255, 255, 0.603);
+            text-align: justify;
+        }
+        .card button{
+            background-color: inherit;
+            color: rgb(15, 228, 15);
+            cursor: pointer;
+            border: 1px solid rgba(247, 246, 245, 0.799);
+            padding: 10px;
+        }
+        .education-container{
+            background-color: rgba(0, 0, 0, 0.863);
+            color: white;
+            padding: 4% 5%;
+        }
+        h1{
+            margin: 3px;
+        }
+        .education-container h1{
+            text-align: center;
+            color: white;
+        }
+        table, th, tr, td{
+            border:1px solid white;
+            border-collapse: collapse;
+            padding: 10px;
+
+        }
+        table{
+            width: 100%;
+        }
+        th{
+            background-color: rgb(163, 12, 57);
+        }
+        .acheivements-contact-container{
+            background-color: black;
+            color:white;
+            display: flex;
+            line-height: 1.5;
+            padding:3% 5%; 
+        }
+        .acheivements-container,.contact-container{
+            width:50%;
+        }
+        .acheivements-container ul{
+            padding:0px;
+            margin:0px;
+        }
+        .acheivements-contact-container i{
+            color:greenyellow;
+            margin-right:5px;
+        }
+        .declaration-conatainer{
+            background-color: rgba(203, 18, 18, 0.71);
+            color:white;
+            padding:0% 5% 2% 5%;
+        }
+        .content-block{
+            display:flex;
+            border-radius: 10px;
+            justify-content: space-between;
+            padding:15px 30px;
+            margin-top: 10px;
+            border:1px solid white;
+        }
+        .name-line{
+            position: relative;
+            display: inline-block;
+            text-align: center;
+        }
+        .name-line::after{
+            content: "";
+            position:absolute;
+            left:-10px;
+            top:25px;
+            width:90px;
+            height: 2px;
+            background-color: green;
+        }
+        .skill-container{
+            background-color: rgba(43, 9, 9, 0.819);
+            color:white;
+            text-align: center;
+            justify-content: center;
+            border:2px solid rgb(22, 1, 1);
+            padding:50px;
+        }
+        
+
+        .design-card{
+            display: flex;
+            border-radius:8px;
+        }
+        .skill-card{
+            background-color: black;
+            gap:20px;
+            color:white;
+            margin:5px;
+            border-radius: 5px;
+            margin-top: 10px;
+            
+        }
+        .skill-card p{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            line-height:1.3rem;
+        }
+        .skill-card h4{
+            color:red;
+            font-size: larger;
+            
+        }
+        .skill-card i{
+            font-size:10vh;
+            padding:25px;
+        }
+        
+
+        
+       
+
+       
+    </style>
+
+</head>
+    <div class="navbar">
+        <div class="logo-container">
+            <img src="https://imgproxy-g.learnyst.com/https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/101389/courses/241965/Codegnan_logo_lyst1750262254277_lyst1751091962747_lyst1755788481875.png?w=798&h=449&resizetype=fill&format=webp" 
+             alt="Logo" width="20%"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="intro">
+            <p>ABHISHEK JAJIMOGGALA</p>
+            <p>Web Developer | Student</p>
+        </div>
+        </div>
+    <div class="nav-links">
+        <a href="#about_me">About Me</a>|
+        <a href="#acheivements">Acheivements</a>|
+        <a href="#education">Education</a>|
+        <a href="#projects">Projects</a>|
+        <a href="#contact">Contact</a>
+    </div>
+    </div>
+
+
+    <div class="about-container">
+        <div class="about">
+            <h1 id="about_me">About Me</h1>
+            <h2> Hi I'm <span>Abhishek </span><br/>Python Full Stack Trainee at Codegnan IT Solutions</h2>
+            <p>I am a web developer.I have good knowledge for creating a web pages and how to add small components  <br> and improve logical implementations on web pages.</p>
+            <div class="about-links">
+                <a href=""><button>View Project</button></a>
+                <a href=""><button><i class="fa-solid fa-download"></i>Download CV</button></a>
+            </div>
+        </div>
+        <img style=" border-radius: 20px;" src="./Abhisek_hero.jpg" alt="logo" width="25%" />
+    </div>
+
+    <div class="project-container">
+        <h1>Projects</h1><br><br>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg" alt="Project 1">
+                <h3>Student Portifolio</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Minima, quas nisi? Aspernatur mollitia </p>
+                <a href=""><button>View project</button></a>
+            </div> 
+            <div class="card">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg" alt="Project 2">
+                <h3>Online Shopping</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Minima, quas nisi? Aspernatur m</p>
+                <a href=""><button>View project</button></a>
+            </div>
+            <div class="card">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg" alt="Project 3">
+                <h3>ATM</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Minima, quas nisi? Aspernatur mollitia </p>
+                <a href=""><button>View project</button></a>
+            </div>   
+        </div>
+
+    </div>
+    <div class="education-container">
+        <h1>Education</h1> <br><br>
+        <table border="3px" style="border-collapse: collapse;" >
+            <tr>
+                <th>Qualification</th>
+                <th>Institution</th>
+                <th>Year</th>
+                <th>Location</th>
+            </tr>
+
+            <tr>
+                <td>SSC</td>
+                <td>Aditya Vidyaniketan</td>
+                <td>2020</td>
+                <td>vijayawada</td>
+            </tr>
+
+            <tr>
+                <td>B.tech</td>
+                <td>Andhra Loyola Institute of Engineering and Technology</td>
+                <td>2022-2026</td>
+                <td>vijayawada</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="skill-container">
+        <h1>What I Do?</h1>
+        <div class="design-card">
+        <div class="skill-card">
+            <i class="fa-solid fa-desktop"></i>
+            <h4>Web Designing</h4>
+            <p>Design clean and attractive <br>websites that provides great user experience</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-code"></i>
+            <h4>Coding</h4>
+            <p>Design clean and attractive <br>websites that provides great user experience</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-palette"></i>
+            <h4>Designing</h4>
+            <p>Design clean and attractive <br>websites that provides great user experience</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+            <h4>Growing and Snipping</h4>
+            <p>Design clean and attractive <br>websites that provides great user experience</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-rocket"></i>
+            <h4>Deployment</h4>
+            <p>Design clean and attractive <br>websites that provides great user experience</p>
+        </div>
+        <div class="skill-card">
+            <i class="fa-solid fa-headset"></i>
+            <h4>Contact</h4>
+            <p>Design clean and attractive <br>websites that provides great user experience</p>
+        </div></div>
+    </div>
+
+    <div class="acheivements-contact-container">
+        <div class="acheivements-container">
+            <h1>Acheivements</h1>
+            <ul type="none">
+                <li><i class="fa-solid fa-circle-check"></i>Completed HTML Fundamentak</li>
+                <li><i class="fa-solid fa-circle-check"></i>Built small projects using HTML</li>
+                <li><i class="fa-solid fa-circle-check"></i>Consistency learning and improving every day</li>
+                <li><i class="fa-solid fa-circle-check"></i>Practice problem solving</li>
+            </ul>
+        </div>
+        <div class="contact-container">
+            <h1 id="contact">Contact</h1>
+            <div>
+               <i class="fa-solid fa-envelope"></i>
+               Email:
+               <a href="">abhishekjajimoggala@gmail.com</a>
+            </div>
+            <div>
+               <i class="fa-brands fa-github"></i>
+               Github:
+               <a href="https://www.github.com/abhishek-jajimoggala/">https://www.github.com</a>
+            </div>
+        <div>
+            <i class="fa-solid fa-globe"></i>
+            Website:
+            <a href="https://www.youtube.com/@spiritualshortmessages">YouTube</a>
+        </div>
+        <div>
+            <i class="fa-solid fa-location-dot"></i>
+            Location: vijayawada,AP.
+        </div>
+
+        </div>
+
+    </div>
+
+    <div class="declaration-conatainer">
+        <h1>Declaration</h1>
+        <div class="content-block">
+            <p>I here by declare that all the information is give best of my knowledge. heraby declare that <br> all the information is given best of my knowledge</p>
+            <p class="name-line">Abhishek jajimoggala</p>
+        </div>
+    </div>
+    
+
+    <footer>
+        &copy;2026 John Dee. All rights are reserved
+    </footer>
+    
+</body>
+</html>
