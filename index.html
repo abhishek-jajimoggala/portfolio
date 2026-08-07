@@ -13,16 +13,21 @@
         body{
             margin: 0px;
             scroll-behavior:smooth;
+            background-color: darkblue;
+            
         }
         .navbar{
             display: flex;
             color: white;
-            background:linear-gradient(250deg,rgb(0, 0, 0),red,rgb(26, 1, 51));
-            padding:1% 5%;
+            background:rgb(43, 10, 10);
+            padding:1% 8%;
             position: sticky;
             top:0px;
+            border:3px dotted white;
+            
             align-items: center;
             letter-spacing: 1px;
+            border-radius:20px;
         }
         .intro{
             color:wheat;
@@ -51,7 +56,7 @@
             display: flex;
             background-color: rgba(15, 2, 2, 0.982);
             justify-content: space-between;
-            padding:20px;
+            padding:100px;
             border: 3px solid white;
             color: aliceblue;
         }
@@ -114,7 +119,7 @@
             color:rgba(255, 255, 255, 0.603);
             text-align: justify;
         }
-        .card button{
+        .card button:hover{
             background-color: inherit;
             color: rgb(15, 228, 15);
             cursor: pointer;
@@ -125,6 +130,14 @@
             background-color: rgba(0, 0, 0, 0.863);
             color: white;
             padding: 4% 5%;
+        }
+        footer{
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-transform:capitalize;
+            padding:10px;
+            background-color: black;
+            color:white
         }
         h1{
             margin: 3px;
@@ -246,7 +259,7 @@
         </div>
     <div class="nav-links">
         <a href="#about_me">About Me</a>|
-        <a href="#acheivements">Acheivements</a>|
+        <a href="#skills">Skills</a>|
         <a href="#education">Education</a>|
         <a href="#projects">Projects</a>|
         <a href="#contact">Contact</a>
@@ -254,9 +267,9 @@
     </div>
 
 
-    <div class="about-container">
+    <div class="about-container"id="about_me">
         <div class="about">
-            <h1 id="about_me">About Me</h1>
+            <h1>About Me</h1>
             <h2> Hi I'm <span>Abhishek </span><br/>Python Full Stack Trainee at Codegnan IT Solutions</h2>
             <p>I am a web developer.I have good knowledge for creating a web pages and how to add small components  <br> and improve logical implementations on web pages.</p>
             <div class="about-links">
@@ -267,7 +280,7 @@
         <img style=" border-radius: 20px;" src="./Abhisek_hero.jpg" alt="logo" width="25%" />
     </div>
 
-    <div class="project-container">
+    <div class="project-container" id="projects">
         <h1>Projects</h1><br><br>
         <div class="card-container">
             <div class="card">
@@ -295,7 +308,7 @@
         </div>
 
     </div>
-    <div class="education-container">
+    <div class="education-container" id="education">
         <h1>Education</h1> <br><br>
         <table border="3px" style="border-collapse: collapse;" >
             <tr>
@@ -321,7 +334,7 @@
         </table>
     </div>
 
-    <div class="skill-container">
+    <div class="skill-container" id="skills">
         <h1>What I Do?</h1>
         <div class="design-card">
         <div class="skill-card">
@@ -402,7 +415,7 @@
     
 
     <footer>
-        &copy;2026 John Dee. All rights are reserved
+        &copy;2026 Abhishek. All rights are reserved
     </footer>
     
 </body>
