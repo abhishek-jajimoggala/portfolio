@@ -1,467 +1,290 @@
+html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfolio-website</title>
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
-        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer" />
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <title>Abhishek Jajimoggala | Python Full Stack Developer</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet">
-
-    <style>
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background-color: darkblue;
-            font-family: Arial, sans-serif;
-        }
-
-        /* ================= NAVBAR ================= */
-
-        .navbar-custom {
-            background: rgb(43, 10, 10);
-            border: 3px dotted white;
-            border-radius: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            width: 70px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .intro {
-            color: wheat;
-            font-size: 16px;
-            line-height: 1.2;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-
-        .intro p {
-            margin: 0;
-        }
-
-        .nav-link {
-            color: white !important;
-            font-weight: 600;
-        }
-
-        .nav-link:hover {
-            color: greenyellow !important;
-        }
-
-        /* ================= ABOUT ================= */
-
-        .about-container {
-            background-color: rgba(15, 2, 2, 0.982);
-            border: 3px solid white;
-            color: aliceblue;
-            min-height: 500px;
-        }
-
-        .about span {
-            color: greenyellow;
-            font-family: cursive;
-        }
-
-        .about p {
-            color: wheat;
-            font-size: large;
-        }
-
-        .profile-image {
-            width: 280px;
-            max-width: 100%;
-            border-radius: 20px;
-        }
-
-        .about-links button {
-            background-color: transparent;
-            padding: 10px 15px;
-            margin: 5px;
-            color: white;
-            border: 1px solid white;
-            border-radius: 5px;
-        }
-
-        .about-links button:hover {
-            background-color: green;
-            border-color: green;
-        }
-
-        button {
-            font-family: monospace;
-            font-weight: 800;
-        }
-
-        /* ================= PROJECTS ================= */
-
-        .project-container {
-            background-color: black;
-            color: white;
-        }
-
-        .project-title {
-            text-align: center;
-        }
-
-        .project-card {
-            background-color: #111;
-            border: 1px solid rgba(245, 245, 245, 0.662);
-            border-radius: 8px;
-            padding: 10px;
-            height: 100%;
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .project-card p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.603);
-            text-align: justify;
-        }
-
-        .project-card button {
-            background-color: transparent;
-            color: white;
-            border: 1px solid white;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        .project-card button:hover {
-            color: rgb(15, 228, 15);
-            border-color: rgb(15, 228, 15);
-        }
-
-        /* ================= EDUCATION ================= */
-
-        .education-container {
-            background-color: rgba(0, 0, 0, 0.863);
-            color: white;
-        }
-
-        .education-container h1 {
-            text-align: center;
-        }
-
-        .education-table {
-            border: 1px solid white;
-        }
-
-        .education-table th,
-        .education-table td {
-            border: 1px solid white;
-            padding: 12px;
-        }
-
-        .education-table th {
-            background-color: rgb(163, 12, 57);
-        }
-
-        /* ================= SKILLS ================= */
-
-        .skill-container {
-            background-color: rgba(43, 9, 9, 0.819);
-            color: white;
-            text-align: center;
-            border: 2px solid rgb(22, 1, 1);
-        }
-
-        .skill-card {
-            background-color: black;
-            color: white;
-            border-radius: 8px;
-            padding: 20px 10px;
-            height: 100%;
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 10px greenyellow;
-        }
-
-        .skill-card i {
-            font-size: 60px;
-            padding: 15px;
-            color: greenyellow;
-        }
-
-        .skill-card h4 {
-            color: red;
-            font-size: larger;
-        }
-
-        .skill-card p {
-            font-family: Arial, sans-serif;
-            line-height: 1.5rem;
-            color: #ddd;
-        }
-
-        /* ================= ACHIEVEMENTS + CONTACT ================= */
-
-        .acheivements-contact-container {
-            background-color: black;
-            color: white;
-        }
-
-        .acheivements-container ul {
-            padding: 0;
-            margin: 0;
-        }
-
-        .acheivements-container li {
-            margin-bottom: 10px;
-        }
-
-        .acheivements-contact-container i {
-            color: greenyellow;
-            margin-right: 8px;
-        }
-
-        .contact-container a {
-            color: white;
-            text-decoration: none;
-            word-break: break-word;
-        }
-
-        .contact-container a:hover {
-            color: greenyellow;
-        }
-
-        /* ================= DECLARATION ================= */
-
-        .declaration-container {
-            background-color: rgba(203, 18, 18, 0.71);
-            color: white;
-        }
-
-        .content-block {
-            border-radius: 10px;
-            padding: 15px 30px;
-            border: 1px solid white;
-        }
-
-        .name-line {
-            position: relative;
-            display: inline-block;
-            text-align: center;
-            white-space: nowrap;
-        }
-
-        .name-line::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -5px;
-            width: 100%;
-            height: 2px;
-            background-color: green;
-        }
-
-        /* ================= FOOTER ================= */
-
-        footer {
-            text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            text-transform: capitalize;
-            padding: 15px;
-            background-color: black;
-            color: white;
-        }
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 576px) {
-
-            .navbar-custom {
-                border-radius: 0;
-                border-width: 2px;
-            }
-
-            .intro {
-                font-size: 13px;
-            }
-
-            .about h2 {
-                font-size: 22px;
-            }
-
-            .about p {
-                font-size: 15px;
-            }
-
-            .profile-image {
-                width: 220px;
-            }
-
-            .content-block {
-                padding: 15px;
-            }
-
-            .name-line {
-                margin-top: 15px;
-            }
-
-        }
-
-    </style>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
 
 </head>
 
-<body>
 
-    <!-- ================= NAVBAR ================= -->
+<body class="bg-light">
 
-    <nav class="navbar navbar-expand-lg navbar-custom px-3 px-md-5 py-2">
 
-        <div class="container-fluid">
+<!-- =========================
+     NAVBAR
+========================= -->
 
-            <!-- Logo + Name -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
 
-            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+    <div class="container">
 
-                <img src="https://imgproxy-g.learnyst.com/https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/101389/courses/241965/Codegnan_logo_lyst1750262254277_lyst1751091962747_lyst1755788481875.png?w=798&h=449&resizetype=fill&format=webp"
-                    alt="Codegnan Logo"
-                    class="logo">
+        <a class="navbar-brand fw-bold" href="#home">
+            ABHISHEK JAJIMOGGALA
+        </a>
 
-                <div class="intro">
-                    <p>ABHISHEK JAJIMOGGALA</p>
-                    <p>Web Developer | Student</p>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#publications">Publications</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section
+    id="home"
+    class="min-vh-100 d-flex align-items-center bg-dark text-white pt-5"
+>
+
+    <div class="container py-5">
+
+        <div class="row align-items-center g-5">
+
+
+            <div class="col-lg-8">
+
+                <p class="lead mb-2">
+                    Hello, I'm
+                </p>
+
+                <h1 class="display-3 fw-bold">
+                    Abhishek Jajimoggala
+                </h1>
+
+                <h2 class="h2 text-primary fw-bold mt-3">
+                    Python Full Stack Developer
+                </h2>
+
+                <p class="lead text-light mt-4">
+
+                    Motivated Computer Science graduate seeking a Full Stack
+                    Developer role to apply my skills in Python, HTML, CSS,
+                    JavaScript, MySQL, React, Bootstrap and Flask.
+
+                </p>
+
+                <p class="text-secondary">
+
+                    Eager to develop scalable and responsive web applications,
+                    solve real-world problems and continue learning modern
+                    technologies.
+
+                </p>
+
+
+                <div class="d-flex flex-wrap gap-3 mt-4">
+
+                    <a
+                        href="#projects"
+                        class="btn btn-primary btn-lg"
+                    >
+                        <i class="bi bi-code-slash"></i>
+                        View Projects
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline-light btn-lg"
+                    >
+                        <i class="bi bi-envelope"></i>
+                        Contact Me
+                    </a>
+
                 </div>
 
-            </a>
+            </div>
 
 
-            <!-- Mobile Menu Button -->
+            <!-- PROFILE PHOTO -->
 
-            <button class="navbar-toggler bg-light"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#portfolioNavbar"
-                aria-controls="portfolioNavbar"
-                aria-expanded="false"
-                aria-label="Toggle navigation">
+            <div class="col-lg-4 text-center">
 
-                <span class="navbar-toggler-icon"></span>
-
-            </button>
-
-
-            <!-- Navigation Links -->
-
-            <div class="collapse navbar-collapse" id="portfolioNavbar">
-
-                <ul class="navbar-nav ms-auto text-center">
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about_me">About Me</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-
-                </ul>
+                <img
+                    src="./Abhishek.jpeg"
+                    alt="Abhishek Jajimoggala"
+                    class="img-fluid rounded-4 shadow-lg border border-light"
+                >
 
             </div>
 
         </div>
 
-    </nav>
+    </div>
+
+</section>
 
 
-    <!-- ================= ABOUT ================= -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-    <section class="about-container py-5" id="about_me">
+<section id="about" class="py-5">
 
-        <div class="container">
+    <div class="container py-5">
 
-            <div class="row align-items-center g-5">
+        <div class="text-center mb-5">
 
-                <!-- About Text -->
+            <h2 class="display-6 fw-bold">
+                About Me
+            </h2>
 
-                <div class="col-12 col-lg-8">
+            <p class="text-secondary">
+                Get to know me
+            </p>
 
-                    <div class="about">
+        </div>
 
-                        <h1>About Me</h1>
 
-                        <h2>
-                            Hi I'm
-                            <span>Abhishek</span>
-                            <br>
-                            Python Full Stack Trainee at Codegnan IT Solutions
-                        </h2>
+        <div class="row justify-content-center">
 
-                        <p>
-                            I am a web developer. I have good knowledge for creating
-                            web pages and how to add small components and improve
-                            logical implementations on web pages.
+            <div class="col-lg-9">
+
+                <div class="card border-0 shadow">
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <p class="lead">
+
+                            I am a Computer Science and Engineering graduate
+                            with a strong interest in Python Full Stack
+                            Development and web application development.
+
                         </p>
 
-                        <div class="about-links">
+                        <p>
 
-                            <a href="#projects">
-                                <button>View Project</button>
-                            </a>
+                            I am currently undergoing hands-on training in
+                            Python Full Stack Development at Codegnan IT
+                            Solutions. I work with frontend technologies such
+                            as HTML, CSS, JavaScript and Bootstrap, along with
+                            backend technologies including Flask and databases
+                            such as MySQL.
 
-                            <a href="">
-                                <button>
-                                    <i class="fa-solid fa-download"></i>
-                                    Download CV
-                                </button>
-                            </a>
+                        </p>
+
+
+                        <div class="row g-4 mt-3">
+
+                            <div class="col-md-6">
+
+                                <p class="mb-3">
+
+                                    <i class="bi bi-person-fill text-primary me-2"></i>
+
+                                    <strong>Name:</strong><br>
+
+                                    Abhishek Jajimoggala
+
+                                </p>
+
+
+                                <p class="mb-3">
+
+                                    <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+
+                                    <strong>Location:</strong><br>
+
+                                    Vijayawada, India
+
+                                </p>
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <p class="mb-3">
+
+                                    <i class="bi bi-mortarboard-fill text-primary me-2"></i>
+
+                                    <strong>Degree:</strong><br>
+
+                                    B.Tech - Computer Science and Engineering
+
+                                </p>
+
+
+                                <p class="mb-3">
+
+                                    <i class="bi bi-star-fill text-primary me-2"></i>
+
+                                    <strong>CGPA:</strong><br>
+
+                                    7.9 / 10.00
+
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -469,117 +292,60 @@
 
                 </div>
 
-
-                <!-- Profile Image -->
-
-                <div class="col-12 col-lg-4 text-center">
-
-                    <img src="./Abhisek_hero.jpg"
-                        alt="Abhishek"
-                        class="profile-image">
-
-                </div>
-
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= PROJECTS ================= -->
+<!-- =========================
+     SKILLS
+========================= -->
 
-    <section class="project-container py-5" id="projects">
+<section id="skills" class="py-5 bg-primary-subtle">
 
-        <div class="container">
+    <div class="container py-5">
 
-            <h1 class="project-title mb-5">
-                Projects
-            </h1>
+        <div class="text-center mb-5">
 
-            <div class="row g-4">
+            <h2 class="display-6 fw-bold">
+                My Skills
+            </h2>
 
-                <!-- Project 1 -->
+            <p class="text-secondary">
+                Technologies and tools I work with
+            </p>
 
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="project-card">
-
-                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg"
-                            alt="Project 1">
-
-                        <h3 class="mt-3">
-                            Student Portfolio
-                        </h3>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Minima, quas nisi? Aspernatur mollitia.
-                        </p>
-
-                        <a href="#">
-                            <button>
-                                View Project
-                            </button>
-                        </a>
-
-                    </div>
-
-                </div>
+        </div>
 
 
-                <!-- Project 2 -->
-
-                <div class="col-12 col-md-6 col-lg-4">
-
-                    <div class="project-card">
-
-                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg"
-                            alt="Project 2">
-
-                        <h3 class="mt-3">
-                            Online Shopping
-                        </h3>
-
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Minima, quas nisi? Aspernatur mollitia.
-                        </p>
-
-                        <a href="#">
-                            <button>
-                                View Project
-                            </button>
-                        </a>
-
-                    </div>
-
-                </div>
+        <div class="row g-4">
 
 
-                <!-- Project 3 -->
+            <!-- Programming -->
 
-                <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-lg-4 col-md-6">
 
-                    <div class="project-card">
+                <div class="card h-100 border-0 shadow text-center">
 
-                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg"
-                            alt="Project 3">
+                    <div class="card-body p-4">
 
-                        <h3 class="mt-3">
-                            ATM
-                        </h3>
+                        <i class="bi bi-code-square display-4 text-primary"></i>
 
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Minima, quas nisi? Aspernatur mollitia.
-                        </p>
+                        <h4 class="fw-bold mt-3">
+                            Programming
+                        </h4>
 
-                        <a href="#">
-                            <button>
-                                View Project
-                            </button>
-                        </a>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+                            <span class="badge text-bg-primary p-2">
+                                Python
+                            </span>
+
+                        </div>
 
                     </div>
 
@@ -587,217 +353,324 @@
 
             </div>
 
-        </div>
 
-    </section>
+            <!-- Web Development -->
 
+            <div class="col-lg-4 col-md-6">
 
-    <!-- ================= EDUCATION ================= -->
+                <div class="card h-100 border-0 shadow text-center">
 
-    <section class="education-container py-5" id="education">
+                    <div class="card-body p-4">
 
-        <div class="container">
+                        <i class="bi bi-globe display-4 text-primary"></i>
 
-            <h1 class="mb-4">
-                Education
-            </h1>
+                        <h4 class="fw-bold mt-3">
+                            Web Development
+                        </h4>
 
-            <div class="table-responsive">
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
 
-                <table class="table education-table text-white">
+                            <span class="badge text-bg-primary p-2">HTML</span>
 
-                    <thead>
+                            <span class="badge text-bg-primary p-2">CSS</span>
 
-                        <tr>
+                            <span class="badge text-bg-primary p-2">JavaScript</span>
 
-                            <th>Qualification</th>
-                            <th>Institution</th>
-                            <th>Year</th>
-                            <th>Location</th>
+                            <span class="badge text-bg-primary p-2">Bootstrap</span>
 
-                        </tr>
+                            <span class="badge text-bg-primary p-2">React</span>
 
-                    </thead>
+                        </div>
 
-                    <tbody>
+                    </div>
 
-                        <tr>
-
-                            <td>SSC</td>
-
-                            <td>
-                                Aditya Vidyaniketan
-                            </td>
-
-                            <td>2020</td>
-
-                            <td>Vijayawada</td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>B.Tech</td>
-
-                            <td>
-                                Andhra Loyola Institute of Engineering and Technology
-                            </td>
-
-                            <td>2022-2026</td>
-
-                            <td>Vijayawada</td>
-
-                        </tr>
-
-                    </tbody>
-
-                </table>
+                </div>
 
             </div>
 
-        </div>
 
-    </section>
+            <!-- Backend -->
 
+            <div class="col-lg-4 col-md-6">
 
-    <!-- ================= SKILLS ================= -->
+                <div class="card h-100 border-0 shadow text-center">
 
-    <section class="skill-container py-5" id="skills">
+                    <div class="card-body p-4">
 
-        <div class="container">
+                        <i class="bi bi-server display-4 text-primary"></i>
 
-            <h1 class="mb-5">
-                What I Do?
-            </h1>
-
-            <div class="row g-4">
-
-                <!-- Skill 1 -->
-
-                <div class="col-12 col-sm-6 col-lg-4">
-
-                    <div class="skill-card">
-
-                        <i class="fa-solid fa-desktop"></i>
-
-                        <h4>
-                            Web Designing
+                        <h4 class="fw-bold mt-3">
+                            Backend
                         </h4>
 
-                        <p>
-                            Design clean and attractive websites
-                            that provide great user experience.
-                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+                            <span class="badge text-bg-primary p-2">
+                                Flask
+                            </span>
+
+                        </div>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- Skill 2 -->
 
-                <div class="col-12 col-sm-6 col-lg-4">
+            <!-- Database -->
 
-                    <div class="skill-card">
+            <div class="col-lg-4 col-md-6">
 
-                        <i class="fa-solid fa-code"></i>
+                <div class="card h-100 border-0 shadow text-center">
 
-                        <h4>
-                            Coding
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-database display-4 text-primary"></i>
+
+                        <h4 class="fw-bold mt-3">
+                            Database
                         </h4>
 
-                        <p>
-                            Write clean and efficient code
-                            to build useful applications.
-                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+                            <span class="badge text-bg-primary p-2">
+                                MySQL
+                            </span>
+
+                        </div>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- Skill 3 -->
 
-                <div class="col-12 col-sm-6 col-lg-4">
+            <!-- Tools -->
 
-                    <div class="skill-card">
+            <div class="col-lg-4 col-md-6">
 
-                        <i class="fa-solid fa-palette"></i>
+                <div class="card h-100 border-0 shadow text-center">
 
-                        <h4>
-                            Designing
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-tools display-4 text-primary"></i>
+
+                        <h4 class="fw-bold mt-3">
+                            Tools
                         </h4>
 
-                        <p>
-                            Create attractive and user-friendly
-                            web designs.
-                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+                            <span class="badge text-bg-primary p-2">
+                                MySQL Workbench
+                            </span>
+
+                            <span class="badge text-bg-primary p-2">
+                                Visual Studio Code
+                            </span>
+
+                            <span class="badge text-bg-primary p-2">
+                                GitHub
+                            </span>
+
+                        </div>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- Skill 4 -->
 
-                <div class="col-12 col-sm-6 col-lg-4">
+            <!-- Productivity -->
 
-                    <div class="skill-card">
+            <div class="col-lg-4 col-md-6">
 
-                        <i class="fa-solid fa-arrow-trend-up"></i>
+                <div class="card h-100 border-0 shadow text-center">
 
-                        <h4>
-                            Growing and Snipping
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-laptop display-4 text-primary"></i>
+
+                        <h4 class="fw-bold mt-3">
+                            Productivity
                         </h4>
 
-                        <p>
-                            Continuously learn and improve
-                            technical skills.
-                        </p>
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+                            <span class="badge text-bg-primary p-2">
+                                Microsoft Excel
+                            </span>
+
+                            <span class="badge text-bg-primary p-2">
+                                Microsoft Word
+                            </span>
+
+                            <span class="badge text-bg-primary p-2">
+                                Microsoft PowerPoint
+                            </span>
+
+                        </div>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- Skill 5 -->
 
-                <div class="col-12 col-sm-6 col-lg-4">
+            <!-- Operating Systems -->
 
-                    <div class="skill-card">
+            <div class="col-lg-6 col-md-6">
 
-                        <i class="fa-solid fa-rocket"></i>
+                <div class="card h-100 border-0 shadow text-center">
 
-                        <h4>
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-pc-display display-4 text-primary"></i>
+
+                        <h4 class="fw-bold mt-3">
+                            Operating Systems
+                        </h4>
+
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+                            <span class="badge text-bg-primary p-2">
+                                Windows
+                            </span>
+
+                            <span class="badge text-bg-primary p-2">
+                                Linux Basic Commands
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Deployment -->
+
+            <div class="col-lg-6 col-md-6">
+
+                <div class="card h-100 border-0 shadow text-center">
+
+                    <div class="card-body p-4">
+
+                        <i class="bi bi-cloud-upload display-4 text-primary"></i>
+
+                        <h4 class="fw-bold mt-3">
                             Deployment
                         </h4>
 
+                        <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
+
+                            <span class="badge text-bg-primary p-2">
+                                Vercel
+                            </span>
+
+                            <span class="badge text-bg-primary p-2">
+                                GitHub
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience" class="py-5">
+
+    <div class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="display-6 fw-bold">
+                Experience
+            </h2>
+
+            <p class="text-secondary">
+                My professional experience
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+                <div class="card border-start border-primary border-5 shadow">
+
+                    <div class="card-body p-4 p-md-5">
+
+                        <div class="d-flex flex-column flex-md-row justify-content-between gap-2">
+
+                            <div>
+
+                                <h3 class="fw-bold">
+                                    Python Full Stack Trainee
+                                </h3>
+
+                                <h5 class="text-primary">
+                                    Codegnan IT Solutions Pvt Ltd
+                                </h5>
+
+                            </div>
+
+                            <span class="badge text-bg-primary align-self-start fs-6">
+                                May 2026 – Present
+                            </span>
+
+                        </div>
+
+
+                        <hr>
+
+
                         <p>
-                            Deploy websites and applications
-                            for real-world use.
+
+                            Currently undergoing hands-on training in Python
+                            Full Stack Development with practical experience
+                            in frontend technologies such as HTML, CSS,
+                            JavaScript and Bootstrap.
+
                         </p>
 
-                    </div>
-
-                </div>
-
-
-                <!-- Skill 6 -->
-
-                <div class="col-12 col-sm-6 col-lg-4">
-
-                    <div class="skill-card">
-
-                        <i class="fa-solid fa-headset"></i>
-
-                        <h4>
-                            Contact
-                        </h4>
 
                         <p>
-                            Communicate with users and provide
-                            technical support.
+
+                            Working with Flask for backend development and
+                            MySQL for database management, including
+                            authentication and authorization.
+
+                        </p>
+
+
+                        <p class="mb-0">
+
+                            Using GitHub and participating in real-time
+                            projects to understand application architecture,
+                            debugging, testing and deployment fundamentals.
+
                         </p>
 
                     </div>
@@ -808,118 +681,719 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= ACHIEVEMENTS + CONTACT ================= -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
-    <section class="acheivements-contact-container py-5">
+<section id="projects" class="py-5 bg-light">
 
-        <div class="container">
+    <div class="container py-5">
 
-            <div class="row g-5">
+        <div class="text-center mb-5">
 
-                <!-- Achievements -->
+            <h2 class="display-6 fw-bold">
+                Projects
+            </h2>
 
-                <div class="col-12 col-lg-6">
+            <p class="text-secondary">
+                Some of my recent work
+            </p>
 
-                    <div class="acheivements-container">
+        </div>
 
-                        <h1 class="mb-4">
-                            Achievements
-                        </h1>
 
-                        <ul class="list-unstyled">
+        <div class="row g-4">
 
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Completed HTML Fundamentals
-                            </li>
 
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Built small projects using HTML
-                            </li>
+            <!-- PROJECT 1 -->
 
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Consistently learning and improving every day
-                            </li>
+            <div class="col-lg-4 col-md-6">
 
-                            <li>
-                                <i class="fa-solid fa-circle-check"></i>
-                                Practice problem solving
-                            </li>
+                <div class="card h-100 border-0 shadow">
 
-                        </ul>
+                    <div class="card-header bg-primary text-white p-4">
+
+                        <i class="bi bi-mic-fill display-5"></i>
+
+                        <h3 class="mt-3">
+                            Voice Based Assistance
+                        </h3>
+
+                    </div>
+
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <p>
+
+                            Developed a Python-based Voice Virtual Assistant
+                            using Speech Recognition and Google Text-to-Speech
+                            (gTTS).
+
+                        </p>
+
+                        <p>
+
+                            Implemented voice-controlled features such as web
+                            browsing, time retrieval, Google Maps location
+                            search and email sending.
+
+                        </p>
+
+
+                        <h6 class="fw-bold mt-3">
+                            Technologies
+                        </h6>
+
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <span class="badge text-bg-secondary">
+                                Python
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                SpeechRecognition
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                gTTS
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                Gmail SMTP
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                webbrowser
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="btn btn-dark mt-auto"
+                        >
+                            <i class="bi bi-github"></i>
+                            View Project
+                        </a>
 
                     </div>
 
                 </div>
 
+            </div>
 
-                <!-- Contact -->
 
-                <div class="col-12 col-lg-6">
+            <!-- PROJECT 2 -->
 
-                    <div class="contact-container">
+            <div class="col-lg-4 col-md-6">
 
-                        <h1 id="contact" class="mb-4">
-                            Contact
-                        </h1>
+                <div class="card h-100 border-0 shadow">
 
-                        <div class="mb-3">
+                    <div class="card-header bg-primary text-white p-4">
 
-                            <i class="fa-solid fa-envelope"></i>
+                        <i class="bi bi-graph-up-arrow display-5"></i>
 
-                            <strong>Email:</strong>
+                        <h3 class="mt-3">
+                            Food Price Forecasting
+                        </h3>
 
-                            <a href="mailto:abhishekjajimoggala@gmail.com">
-                                abhishekjajimoggala@gmail.com
-                            </a>
+                    </div>
+
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <p>
+
+                            Developed a machine learning-based system to
+                            predict food commodity prices using historical
+                            market data.
+
+                        </p>
+
+                        <p>
+
+                            Implemented a Random Forest model to forecast
+                            prices of tomatoes, paddy, onions, cotton and
+                            red chilli.
+
+                        </p>
+
+                        <p>
+
+                            Built a Flask backend, Weather API and responsive
+                            frontend to display price predictions.
+
+                        </p>
+
+
+                        <h6 class="fw-bold mt-3">
+                            Technologies
+                        </h6>
+
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <span class="badge text-bg-secondary">
+                                Python
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                Pandas
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                Scikit-learn
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                Random Forest
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                Flask
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                MongoDB
+                            </span>
 
                         </div>
 
 
-                        <div class="mb-3">
+                        <a
+                            href="#"
+                            class="btn btn-dark mt-auto"
+                        >
+                            <i class="bi bi-github"></i>
+                            View Project
+                        </a>
 
-                            <i class="fa-brands fa-github"></i>
+                    </div>
 
-                            <strong>Github:</strong>
+                </div>
 
-                            <a href="https://www.github.com/abhishek-jajimoggala/"
-                                target="_blank">
+            </div>
 
-                                github.com/abhishek-jajimoggala
 
-                            </a>
+            <!-- PROJECT 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100 border-0 shadow">
+
+                    <div class="card-header bg-primary text-white p-4">
+
+                        <i class="bi bi-person-lines-fill display-5"></i>
+
+                        <h3 class="mt-3">
+                            Contact Based Management System
+                        </h3>
+
+                    </div>
+
+
+                    <div class="card-body p-4 d-flex flex-column">
+
+                        <p>
+
+                            Developed a Python-based Contact Management
+                            System using Object-Oriented Programming concepts.
+
+                        </p>
+
+                        <p>
+
+                            Implemented add, view, update and delete
+                            operations for managing contact details such
+                            as name, mobile number and email.
+
+                        </p>
+
+                        <p>
+
+                            Used classes, objects, lists, methods and
+                            conditional logic to create an interactive
+                            menu-driven application.
+
+                        </p>
+
+
+                        <h6 class="fw-bold mt-3">
+                            Technologies
+                        </h6>
+
+
+                        <div class="d-flex flex-wrap gap-2">
+
+                            <span class="badge text-bg-secondary">
+                                Python
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                OOP
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                Lists
+                            </span>
+
+                            <span class="badge text-bg-secondary">
+                                CRUD
+                            </span>
 
                         </div>
 
 
-                        <div class="mb-3">
+                        <a
+                            href="#"
+                            class="btn btn-dark mt-auto"
+                        >
+                            <i class="bi bi-code-slash"></i>
+                            View Project
+                        </a>
 
-                            <i class="fa-solid fa-globe"></i>
+                    </div>
 
-                            <strong>Website:</strong>
+                </div>
 
-                            <a href="https://www.youtube.com/@spiritualshortmessages"
-                                target="_blank">
+            </div>
 
-                                YouTube
+        </div>
 
-                            </a>
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EDUCATION
+========================= -->
+
+<section id="education" class="py-5 bg-primary-subtle">
+
+    <div class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="display-6 fw-bold">
+                Education
+            </h2>
+
+            <p class="text-secondary">
+                My academic background
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- BTECH -->
+
+            <div class="col-lg-4">
+
+                <div class="card h-100 border-0 shadow">
+
+                    <div class="card-body p-4">
+
+                        <div class="text-center">
+
+                            <i class="bi bi-mortarboard-fill display-4 text-primary"></i>
+
+                            <h4 class="fw-bold mt-3">
+                                B.Tech
+                            </h4>
 
                         </div>
 
 
-                        <div>
+                        <h5 class="mt-4">
+                            Computer Science and Engineering
+                        </h5>
 
-                            <i class="fa-solid fa-location-dot"></i>
+                        <p class="mb-1">
 
-                            <strong>Location:</strong>
+                            Andhra Loyola Institute of Engineering
+                            and Technology
 
-                            Vijayawada, AP.
+                        </p>
+
+                        <p class="text-primary fw-bold">
+
+                            09/2022 – 04/2026
+
+                        </p>
+
+                        <p>
+
+                            <strong>CGPA:</strong> 7.9 / 10.00
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- INTERMEDIATE -->
+
+            <div class="col-lg-4">
+
+                <div class="card h-100 border-0 shadow">
+
+                    <div class="card-body p-4">
+
+                        <div class="text-center">
+
+                            <i class="bi bi-book-fill display-4 text-primary"></i>
+
+                            <h4 class="fw-bold mt-3">
+                                Intermediate
+                            </h4>
+
+                        </div>
+
+
+                        <h5 class="mt-4">
+                            Narayana Junior College
+                        </h5>
+
+                        <p class="mb-1">
+                            BIEAP
+                        </p>
+
+                        <p class="text-primary fw-bold">
+                            09/2020 – 04/2022
+                        </p>
+
+                        <p>
+                            <strong>Percentage:</strong> 70%
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SSC -->
+
+            <div class="col-lg-4">
+
+                <div class="card h-100 border-0 shadow">
+
+                    <div class="card-body p-4">
+
+                        <div class="text-center">
+
+                            <i class="bi bi-award-fill display-4 text-primary"></i>
+
+                            <h4 class="fw-bold mt-3">
+                                SSC
+                            </h4>
+
+                        </div>
+
+
+                        <h5 class="mt-4">
+                            Adithya Vidyaniketan
+                        </h5>
+
+                        <p class="mb-1">
+                            BSEAP
+                        </p>
+
+                        <p class="text-primary fw-bold">
+                            06/2019 – 04/2020
+                        </p>
+
+                        <p>
+                            <strong>Percentage:</strong> 98%
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PUBLICATION
+========================= -->
+
+<section id="publications" class="py-5">
+
+    <div class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="display-6 fw-bold">
+                Publication
+            </h2>
+
+            <p class="text-secondary">
+                Academic publication
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card border-0 shadow">
+
+                    <div class="card-body text-center p-5">
+
+                        <i class="bi bi-journal-text display-3 text-primary"></i>
+
+                        <h3 class="fw-bold mt-4">
+
+                            Business Oriented Food Price
+                            Forecasting using Machine Learning
+
+                        </h3>
+
+                        <p class="text-primary fw-bold mt-3">
+
+                            JCES - Journal of Computer and Electrical Sciences
+
+                        </p>
+
+                        <p class="text-muted">
+
+                            April 2026
+
+                        </p>
+
+
+                        <p>
+
+                            A machine learning-based application designed
+                            to predict food commodity prices using historical
+                            market data. The system uses a Random Forest
+                            algorithm and a Flask backend with a responsive
+                            web interface.
+
+                        </p>
+
+                    </div>
+                            <a href="#"><button>View Publication</button></a>
+                </div>
+
+            </div>
+
+        </div>
+        
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LANGUAGES
+========================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-4">
+
+            <h2 class="fw-bold">
+                Languages
+            </h2>
+
+        </div>
+
+
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+
+            <span class="badge text-bg-primary fs-6 p-3">
+                English
+            </span>
+
+            <span class="badge text-bg-primary fs-6 p-3">
+                Telugu
+            </span>
+
+            <span class="badge text-bg-primary fs-6 p-3">
+                Hindi
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="py-5">
+
+    <div class="container py-5">
+
+        <div class="text-center mb-5">
+
+            <h2 class="display-6 fw-bold">
+                Contact Me
+            </h2>
+
+            <p class="text-secondary">
+                Let's connect
+            </p>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card border-0 shadow">
+
+                    <div class="card-body p-4 p-md-5">
+
+
+                        <!-- EMAIL -->
+
+                        <div class="d-flex align-items-center gap-3 mb-4">
+
+                            <i class="bi bi-envelope-fill display-6 text-primary"></i>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Email
+                                </h6>
+
+                                <a
+                                    href="mailto:abhishekjajimoggala@gmail.com"
+                                    class="text-decoration-none"
+                                >
+                                    abhishekjajimoggala@gmail.com
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- PHONE -->
+
+                        <div class="d-flex align-items-center gap-3 mb-4">
+
+                            <i class="bi bi-telephone-fill display-6 text-primary"></i>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Phone
+                                </h6>
+
+                                <a
+                                    href="tel:9390758579"
+                                    class="text-decoration-none"
+                                >
+                                    9390758579
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LINKEDIN -->
+
+                        <div class="d-flex align-items-center gap-3 mb-4">
+
+                            <i class="bi bi-linkedin display-6 text-primary"></i>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    LinkedIn
+                                </h6>
+
+                                <a
+                                    href="https://www.linkedin.com/in/abhishek-jajimoggala/"
+                                    target="_blank"
+                                    class="text-decoration-none"
+                                >
+                                    linkedin.com/in/abhishek-jajimoggala
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- GITHUB -->
+
+                        <div class="d-flex align-items-center gap-3 mb-4">
+
+                            <i class="bi bi-github display-6 text-primary"></i>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    GitHub
+                                </h6>
+
+                                <a
+                                    href="https://github.com/abhishek-jajimoggala"
+                                    target="_blank"
+                                    class="text-decoration-none"
+                                >
+                                    github.com/abhishek-jajimoggala
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOCATION -->
+
+                        <div class="d-flex align-items-center gap-3">
+
+                            <i class="bi bi-geo-alt-fill display-6 text-primary"></i>
+
+                            <div>
+
+                                <h6 class="fw-bold mb-1">
+                                    Location
+                                </h6>
+
+                                <p class="mb-0">
+                                    Vijayawada, India
+                                </p>
+
+                            </div>
 
                         </div>
 
@@ -931,64 +1405,103 @@
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
-    <!-- ================= DECLARATION ================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-    <section class="declaration-container py-4">
+<footer class="bg-dark text-white py-4">
 
-        <div class="container">
+    <div class="container text-center">
 
-            <h1 class="mb-3">
-                Declaration
-            </h1>
 
-            <div class="content-block">
+        <div class="d-flex justify-content-center gap-4 mb-3">
 
-                <div class="row align-items-center">
+            <a
+                href="https://github.com/abhishek-jajimoggala"
+                target="_blank"
+                class="text-white fs-3"
+            >
+                <i class="bi bi-github"></i>
+            </a>
 
-                    <div class="col-12 col-md-8">
 
-                        <p class="mb-md-0">
+            <a
+                href="https://www.linkedin.com/in/abhishek-jajimoggala/"
+                target="_blank"
+                class="text-white fs-3"
+            >
+                <i class="bi bi-linkedin"></i>
+            </a>
 
-                            I hereby declare that all the information
-                            is given to the best of my knowledge.
 
-                        </p>
-
-                    </div>
-
-                    <div class="col-12 col-md-4 text-md-end">
-
-                        <p class="name-line mb-0">
-                            Abhishek Jajimoggala
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
+            <a
+                href="mailto:abhishekjajimoggala@gmail.com"
+                class="text-white fs-3"
+            >
+                <i class="bi bi-envelope-fill"></i>
+            </a>
 
         </div>
 
-    </section>
+
+        <p class="mb-0">
+
+            © 2026 Abhishek Jajimoggala.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
 
 
-    <!-- ================= FOOTER ================= -->
+<!-- =========================
+     BOOTSTRAP JS
+========================= -->
 
-    <footer>
-
-        &copy; 2026 Abhishek. All rights are reserved.
-
-    </footer>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
 
 
-    <!-- Bootstrap JavaScript -->
+<!-- Close mobile navbar after clicking -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+<script>
+
+    document
+        .querySelectorAll(".navbar-nav .nav-link")
+        .forEach(function(link) {
+
+            link.addEventListener("click", function() {
+
+                const navbar =
+                    document.querySelector(".navbar-collapse");
+
+                if (navbar.classList.contains("show")) {
+
+                    const bsCollapse =
+                        bootstrap.Collapse.getInstance(navbar);
+
+                    if (bsCollapse) {
+
+                        bsCollapse.hide();
+
+                    }
+
+                }
+
+            });
+
+        });
+
+</script>
+
 
 </body>
 
