@@ -1,15 +1,36 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Portfolio-website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
     <style>
+<<<<<<< HEAD
         body{
             margin: 0px;
             scroll-behavior:smooth;
@@ -28,109 +49,171 @@
             align-items: center;
             letter-spacing: 1px;
             border-radius:20px;
+=======
+
+        html {
+            scroll-behavior: smooth;
         }
-        .intro{
-            color:wheat;
-            font-size: large;
+
+        body {
+            margin: 0;
+            background-color: darkblue;
+            font-family: Arial, sans-serif;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar-custom {
+            background: rgb(43, 10, 10);
+            border: 3px solid white;
+            border-radius: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+>>>>>>> 236331c (updated portfolio)
+        }
+
+        .logo {
+            width: 70px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .intro {
+            color: wheat;
+            font-size: 16px;
+            line-height: 1.2;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
-        .logo-container{
-            display: flex;
-            line-height: 0.5;
+
+        .intro p {
+            margin: 0;
         }
-        .nav-links a{
-            text-decoration: none;
-            color:white;
+
+        .nav-link {
+            color: white !important;
+            font-weight: 600;
         }
-        .nav-links{
-            display: flex;
-            justify-content: space-evenly;
-            width:60%;
+
+        .nav-link:hover {
+            color: greenyellow !important;
         }
-        a{
-            text-decoration: none;
-            color:white
-        }
-        
-        .about-container{
-            display: flex;
+
+        /* ================= ABOUT ================= */
+
+        .about-container {
             background-color: rgba(15, 2, 2, 0.982);
+<<<<<<< HEAD
             justify-content: space-between;
             padding:100px;
+=======
+>>>>>>> 236331c (updated portfolio)
             border: 3px solid white;
             color: aliceblue;
+            min-height: 500px;
         }
-        .about span{
+
+        .about span {
             color: greenyellow;
             font-family: cursive;
         }
-        .about p{
-            color:wheat;
-            font-size:large;
-        }
-        .about{
-            padding: 3% 3%;
-        
-        }
-        .about-links{
-            padding: 5%;
 
+        .about p {
+            color: wheat;
+            font-size: large;
         }
-        .about-links button{
-            background-color:inherit;
-            padding: 10px;
-            margin: 10px;
-            color:white;
+
+        .profile-image {
+            width: 280px;
+            max-width: 100%;
+            border-radius: 20px;
+        }
+
+        .about-links button {
+            background-color: transparent;
+            padding: 10px 15px;
+            margin: 5px;
+            color: white;
             border: 1px solid white;
-            
-        }
-        .about-links button:hover{
-            background-color: green;
             border-radius: 5px;
-            border:none
         }
-        button{
+
+        .about-links button:hover {
+            background-color: green;
+            border-color: green;
+        }
+
+        button {
             font-family: monospace;
             font-weight: 800;
         }
-       .project-container{
-        background-color: black;
-        padding:2% 5%;
-        color:white;
-       }
-       .project-container h1{
-        text-align: center;
-       }
-       .card-container{
-        display: flex;
-        gap:20px
-       }
-       .card{
+
+        /* ================= PROJECTS ================= */
+
+        .project-container {
+            background-color: black;
+            color: white;
+        }
+
+        .project-title {
+            text-align: center;
+        }
+
+        .project-card {
+            background-color: #111;
             border: 1px solid rgba(245, 245, 245, 0.662);
-            padding: 10px;
             border-radius: 8px;
+            padding: 10px;
+            height: 100%;
+            transition: 0.3s;
         }
-        .card-container img{
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card img {
             width: 100%;
-            border-radius:10px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
         }
-        .card p{
-            font-size: 0.8rem;
-            color:rgba(255, 255, 255, 0.603);
+
+        .project-card p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.603);
             text-align: justify;
         }
+<<<<<<< HEAD
         .card button:hover{
             background-color: inherit;
             color: rgb(15, 228, 15);
             cursor: pointer;
             border: 1px solid rgba(247, 246, 245, 0.799);
             padding: 10px;
+=======
+
+        .project-card button {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 8px 15px;
+            border-radius: 5px;
+>>>>>>> 236331c (updated portfolio)
         }
-        .education-container{
+
+        .project-card button:hover {
+            color: rgb(15, 228, 15);
+            border-color: rgb(15, 228, 15);
+        }
+
+        /* ================= EDUCATION ================= */
+
+        .education-container {
             background-color: rgba(0, 0, 0, 0.863);
             color: white;
-            padding: 4% 5%;
         }
+<<<<<<< HEAD
         footer{
             text-align: center;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -150,104 +233,178 @@
             border:1px solid white;
             border-collapse: collapse;
             padding: 10px;
+=======
+>>>>>>> 236331c (updated portfolio)
 
+        .education-container h1 {
+            text-align: center;
         }
-        table{
-            width: 100%;
+
+        .education-table {
+            border: 1px solid white;
         }
-        th{
+
+        .education-table th,
+        .education-table td {
+            border: 1px solid white;
+            padding: 12px;
+        }
+
+        .education-table th {
             background-color: rgb(163, 12, 57);
         }
-        .acheivements-contact-container{
+
+        /* ================= SKILLS ================= */
+
+        .skill-container {
+            background-color: rgba(43, 9, 9, 0.819);
+            color: white;
+            text-align: center;
+            border: 2px solid rgb(22, 1, 1);
+        }
+
+        .skill-card {
             background-color: black;
-            color:white;
-            display: flex;
-            line-height: 1.5;
-            padding:3% 5%; 
+            color: white;
+            border-radius: 8px;
+            padding: 20px 10px;
+            height: 100%;
+            transition: 0.3s;
         }
-        .acheivements-container,.contact-container{
-            width:50%;
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 10px greenyellow;
         }
-        .acheivements-container ul{
-            padding:0px;
-            margin:0px;
+
+        .skill-card i {
+            font-size: 60px;
+            padding: 15px;
+            color: greenyellow;
         }
-        .acheivements-contact-container i{
-            color:greenyellow;
-            margin-right:5px;
+
+        .skill-card h4 {
+            color: red;
+            font-size: larger;
         }
-        .declaration-conatainer{
+
+        .skill-card p {
+            font-family: Arial, sans-serif;
+            line-height: 1.5rem;
+            color: #ddd;
+        }
+
+        /* ================= ACHIEVEMENTS + CONTACT ================= */
+
+        .acheivements-contact-container {
+            background-color: black;
+            color: white;
+        }
+
+        .acheivements-container ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        .acheivements-container li {
+            margin-bottom: 10px;
+        }
+
+        .acheivements-contact-container i {
+            color: greenyellow;
+            margin-right: 8px;
+        }
+
+        .contact-container a {
+            color: white;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .contact-container a:hover {
+            color: greenyellow;
+        }
+
+        /* ================= DECLARATION ================= */
+
+        .declaration-container {
             background-color: rgba(203, 18, 18, 0.71);
-            color:white;
-            padding:0% 5% 2% 5%;
+            color: white;
         }
-        .content-block{
-            display:flex;
+
+        .content-block {
             border-radius: 10px;
-            justify-content: space-between;
-            padding:15px 30px;
-            margin-top: 10px;
-            border:1px solid white;
+            padding: 15px 30px;
+            border: 1px solid white;
         }
-        .name-line{
+
+        .name-line {
             position: relative;
             display: inline-block;
             text-align: center;
+            white-space: nowrap;
         }
-        .name-line::after{
+
+        .name-line::after {
             content: "";
-            position:absolute;
-            left:-10px;
-            top:25px;
-            width:90px;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
             height: 2px;
             background-color: green;
         }
-        .skill-container{
-            background-color: rgba(43, 9, 9, 0.819);
-            color:white;
+
+        /* ================= FOOTER ================= */
+
+        footer {
             text-align: center;
-            justify-content: center;
-            border:2px solid rgb(22, 1, 1);
-            padding:50px;
-        }
-        
-
-        .design-card{
-            display: flex;
-            border-radius:8px;
-        }
-        .skill-card{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-transform: capitalize;
+            padding: 15px;
             background-color: black;
-            gap:20px;
-            color:white;
-            margin:5px;
-            border-radius: 5px;
-            margin-top: 10px;
-            
+            color: white;
         }
-        .skill-card p{
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            line-height:1.3rem;
-        }
-        .skill-card h4{
-            color:red;
-            font-size: larger;
-            
-        }
-        .skill-card i{
-            font-size:10vh;
-            padding:25px;
-        }
-        
 
-        
-       
+        /* ================= MOBILE ================= */
 
-       
+        @media (max-width: 576px) {
+
+            .navbar-custom {
+                border-radius: 0;
+                border-width: 2px;
+            }
+
+            .intro {
+                font-size: 13px;
+            }
+
+            .about h2 {
+                font-size: 22px;
+            }
+
+            .about p {
+                font-size: 15px;
+            }
+
+            .profile-image {
+                width: 220px;
+            }
+
+            .content-block {
+                padding: 15px;
+            }
+
+            .name-line {
+                margin-top: 15px;
+            }
+
+        }
+
     </style>
 
 </head>
+<<<<<<< HEAD
     <div class="navbar">
         <div class="logo-container">
             <img src="https://imgproxy-g.learnyst.com/https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/101389/courses/241965/Codegnan_logo_lyst1750262254277_lyst1751091962747_lyst1755788481875.png?w=798&h=449&resizetype=fill&format=webp" 
@@ -275,38 +432,156 @@
             <div class="about-links">
                 <a href=""><button>View Project</button></a>
                 <a href=""><button><i class="fa-solid fa-download"></i>Download CV</button></a>
-            </div>
-        </div>
-        <img style=" border-radius: 20px;" src="./Abhisek_hero.jpg" alt="logo" width="25%" />
-    </div>
+=======
 
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-custom px-3 px-md-5 py-2">
+
+        <div class="container-fluid">
+
+            <!-- Logo + Name -->
+
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+
+                <img src="https://imgproxy-g.learnyst.com/https://imgproxy.learnyst.com/learnyst-user-assets/school-assets/schools/101389/courses/241965/Codegnan_logo_lyst1750262254277_lyst1751091962747_lyst1755788481875.png?w=798&h=449&resizetype=fill&format=webp"
+                    alt="Codegnan Logo"
+                    class="logo">
+
+                <div class="intro">
+                    <p>ABHISHEK JAJIMOGGALA</p>
+                    <p>Web Developer | Student</p>
+                </div>
+
+            </a>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button class="navbar-toggler bg-light"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#portfolioNavbar"
+                aria-controls="portfolioNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+
+            <!-- Navigation Links -->
+
+            <div class="collapse navbar-collapse" id="portfolioNavbar">
+
+                <ul class="navbar-nav ms-auto text-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about_me">About Me</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+>>>>>>> 236331c (updated portfolio)
+            </div>
+
+        </div>
+
+<<<<<<< HEAD
     <div class="project-container" id="projects">
         <h1>Projects</h1><br><br>
         <div class="card-container">
             <div class="card">
                 <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg" alt="Project 1">
                 <h3>Student Portifolio</h3>
+=======
+    </nav>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Minima, quas nisi? Aspernatur mollitia </p>
-                <a href=""><button>View project</button></a>
-            </div> 
-            <div class="card">
-                <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg" alt="Project 2">
-                <h3>Online Shopping</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Minima, quas nisi? Aspernatur m</p>
-                <a href=""><button>View project</button></a>
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about-container py-5" id="about_me">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <!-- About Text -->
+
+                <div class="col-12 col-lg-8">
+
+                    <div class="about">
+
+                        <h1>About Me</h1>
+
+                        <h2>
+                            Hi I'm
+                            <span>Abhishek</span>
+                            <br>
+                            Python Full Stack Trainee at Codegnan IT Solutions
+                        </h2>
+
+                        <p>
+                            I am a web developer. I have good knowledge for creating
+                            web pages and how to add small components and improve
+                            logical implementations on web pages.
+                        </p>
+
+                        <div class="about-links">
+
+                            <a href="#projects">
+                                <button>View Project</button>
+                            </a>
+
+                            <a href="">
+                                <button>
+                                    <i class="fa-solid fa-download"></i>
+                                    Download CV
+                                </button>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Profile Image -->
+
+                <div class="col-12 col-lg-4 text-center">
+
+                    <img src="./Abhisek_hero.jpg"
+                        alt="Abhishek"
+                        class="profile-image">
+
+                </div>
+>>>>>>> 236331c (updated portfolio)
+
             </div>
-            <div class="card">
-                <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg" alt="Project 3">
-                <h3>ATM</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Minima, quas nisi? Aspernatur mollitia </p>
-                <a href=""><button>View project</button></a>
-            </div>   
+
         </div>
 
+<<<<<<< HEAD
     </div>
     <div class="education-container" id="education">
         <h1>Education</h1> <br><br>
@@ -317,23 +592,14 @@
                 <th>Year</th>
                 <th>Location</th>
             </tr>
+=======
+    </section>
+>>>>>>> 236331c (updated portfolio)
 
-            <tr>
-                <td>SSC</td>
-                <td>Aditya Vidyaniketan</td>
-                <td>2020</td>
-                <td>vijayawada</td>
-            </tr>
 
-            <tr>
-                <td>B.tech</td>
-                <td>Andhra Loyola Institute of Engineering and Technology</td>
-                <td>2022-2026</td>
-                <td>vijayawada</td>
-            </tr>
-        </table>
-    </div>
+    <!-- ================= PROJECTS ================= -->
 
+<<<<<<< HEAD
     <div class="skill-container" id="skills">
         <h1>What I Do?</h1>
         <div class="design-card">
@@ -368,55 +634,518 @@
             <p>Design clean and attractive <br>websites that provides great user experience</p>
         </div></div>
     </div>
+=======
+    <section class="project-container py-5" id="projects">
 
-    <div class="acheivements-contact-container">
-        <div class="acheivements-container">
-            <h1>Acheivements</h1>
-            <ul type="none">
-                <li><i class="fa-solid fa-circle-check"></i>Completed HTML Fundamentak</li>
-                <li><i class="fa-solid fa-circle-check"></i>Built small projects using HTML</li>
-                <li><i class="fa-solid fa-circle-check"></i>Consistency learning and improving every day</li>
-                <li><i class="fa-solid fa-circle-check"></i>Practice problem solving</li>
-            </ul>
-        </div>
-        <div class="contact-container">
-            <h1 id="contact">Contact</h1>
-            <div>
-               <i class="fa-solid fa-envelope"></i>
-               Email:
-               <a href="">abhishekjajimoggala@gmail.com</a>
+        <div class="container">
+
+            <h1 class="project-title mb-5">
+                Projects
+            </h1>
+
+            <div class="row g-4">
+
+                <!-- Project 1 -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="project-card">
+
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg"
+                            alt="Project 1">
+
+                        <h3 class="mt-3">
+                            Student Portfolio
+                        </h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Minima, quas nisi? Aspernatur mollitia.
+                        </p>
+
+                        <a href="#">
+                            <button>
+                                View Project
+                            </button>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 2 -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="project-card">
+
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg"
+                            alt="Project 2">
+
+                        <h3 class="mt-3">
+                            Online Shopping
+                        </h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Minima, quas nisi? Aspernatur mollitia.
+                        </p>
+
+                        <a href="#">
+                            <button>
+                                View Project
+                            </button>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Project 3 -->
+
+                <div class="col-12 col-md-6 col-lg-4">
+
+                    <div class="project-card">
+
+                        <img src="https://miro.medium.com/v2/resize:fit:1400/1*fiEXMWcFg328ztjZEWYlpg.jpeg"
+                            alt="Project 3">
+
+                        <h3 class="mt-3">
+                            ATM
+                        </h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Minima, quas nisi? Aspernatur mollitia.
+                        </p>
+
+                        <a href="#">
+                            <button>
+                                View Project
+                            </button>
+                        </a>
+
+                    </div>
+
+                </div>
+>>>>>>> 236331c (updated portfolio)
+
             </div>
-            <div>
-               <i class="fa-brands fa-github"></i>
-               Github:
-               <a href="https://www.github.com/abhishek-jajimoggala/">https://www.github.com</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section class="education-container py-5" id="education">
+
+        <div class="container">
+
+            <h1 class="mb-4">
+                Education
+            </h1>
+
+            <div class="table-responsive">
+
+                <table class="table education-table text-white">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Qualification</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Location</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>SSC</td>
+
+                            <td>
+                                Aditya Vidyaniketan
+                            </td>
+
+                            <td>2020</td>
+
+                            <td>Vijayawada</td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>B.Tech</td>
+
+                            <td>
+                                Andhra Loyola Institute of Engineering and Technology
+                            </td>
+
+                            <td>2022-2026</td>
+
+                            <td>Vijayawada</td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
             </div>
-        <div>
-            <i class="fa-solid fa-globe"></i>
-            Website:
-            <a href="https://www.youtube.com/@spiritualshortmessages">YouTube</a>
-        </div>
-        <div>
-            <i class="fa-solid fa-location-dot"></i>
-            Location: vijayawada,AP.
-        </div>
 
         </div>
 
-    </div>
+    </section>
 
-    <div class="declaration-conatainer">
-        <h1>Declaration</h1>
-        <div class="content-block">
-            <p>I here by declare that all the information is give best of my knowledge. heraby declare that <br> all the information is given best of my knowledge</p>
-            <p class="name-line">Abhishek jajimoggala</p>
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="skill-container py-5" id="skills">
+
+        <div class="container">
+
+            <h1 class="mb-5">
+                What I Do?
+            </h1>
+
+            <div class="row g-4">
+
+                <!-- Skill 1 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="skill-card">
+
+                        <i class="fa-solid fa-desktop"></i>
+
+                        <h4>
+                            Web Designing
+                        </h4>
+
+                        <p>
+                            Design clean and attractive websites
+                            that provide great user experience.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Skill 2 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="skill-card">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        <h4>
+                            Coding
+                        </h4>
+
+                        <p>
+                            Write clean and efficient code
+                            to build useful applications.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Skill 3 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="skill-card">
+
+                        <i class="fa-solid fa-palette"></i>
+
+                        <h4>
+                            Designing
+                        </h4>
+
+                        <p>
+                            Create attractive and user-friendly
+                            web designs.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Skill 4 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="skill-card">
+
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+
+                        <h4>
+                            Growing and Snipping
+                        </h4>
+
+                        <p>
+                            Continuously learn and improve
+                            technical skills.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Skill 5 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="skill-card">
+
+                        <i class="fa-solid fa-rocket"></i>
+
+                        <h4>
+                            Deployment
+                        </h4>
+
+                        <p>
+                            Deploy websites and applications
+                            for real-world use.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Skill 6 -->
+
+                <div class="col-12 col-sm-6 col-lg-4">
+
+                    <div class="skill-card">
+
+                        <i class="fa-solid fa-headset"></i>
+
+                        <h4>
+                            Contact
+                        </h4>
+
+                        <p>
+                            Communicate with users and provide
+                            technical support.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
         </div>
-    </div>
-    
+
+    </section>
+
+
+    <!-- ================= ACHIEVEMENTS + CONTACT ================= -->
+
+    <section class="acheivements-contact-container py-5">
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- Achievements -->
+
+                <div class="col-12 col-lg-6">
+
+                    <div class="acheivements-container">
+
+                        <h1 class="mb-4">
+                            Achievements
+                        </h1>
+
+                        <ul class="list-unstyled">
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Completed HTML Fundamentals
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Built small projects using HTML
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Consistently learning and improving every day
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Practice problem solving
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Contact -->
+
+                <div class="col-12 col-lg-6">
+
+                    <div class="contact-container">
+
+                        <h1 id="contact" class="mb-4">
+                            Contact
+                        </h1>
+
+                        <div class="mb-3">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <strong>Email:</strong>
+
+                            <a href="mailto:abhishekjajimoggala@gmail.com">
+                                abhishekjajimoggala@gmail.com
+                            </a>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <i class="fa-brands fa-github"></i>
+
+                            <strong>Github:</strong>
+
+                            <a href="https://www.github.com/abhishek-jajimoggala/"
+                                target="_blank">
+
+                                github.com/abhishek-jajimoggala
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <i class="fa-solid fa-globe"></i>
+
+                            <strong>Website:</strong>
+
+                            <a href="https://www.youtube.com/@spiritualshortmessages"
+                                target="_blank">
+
+                                YouTube
+
+                            </a>
+
+                        </div>
+
+
+                        <div>
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <strong>Location:</strong>
+
+                            Vijayawada, AP.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= DECLARATION ================= -->
+
+    <section class="declaration-container py-4">
+
+        <div class="container">
+
+            <h1 class="mb-3">
+                Declaration
+            </h1>
+
+            <div class="content-block">
+
+                <div class="row align-items-center">
+
+                    <div class="col-12 col-md-8">
+
+                        <p class="mb-md-0">
+
+                            I hereby declare that all the information
+                            is given to the best of my knowledge.
+
+                        </p>
+
+                    </div>
+
+                    <div class="col-12 col-md-4 text-md-end">
+
+                        <p class="name-line mb-0">
+                            Abhishek Jajimoggala
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
+<<<<<<< HEAD
         &copy;2026 Abhishek. All rights are reserved
+=======
+
+        &copy; 2026 Abhishek. All rights are reserved.
+
+>>>>>>> 236331c (updated portfolio)
     </footer>
-    
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
 </body>
+<<<<<<< HEAD
 </html>
+=======
+
+</html>
+```
+>>>>>>> 236331c (updated portfolio)
